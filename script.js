@@ -50,7 +50,7 @@
                     if (value.endsWith('.0')) {
                         value = value.replace('.0', '');
                     }
-                    element.textContent = value + "M";
+                    element.textContent = "+" +value + "M";
                 } else {
                     element.textContent = "+" + value;
                 }
