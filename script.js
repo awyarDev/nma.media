@@ -1,22 +1,31 @@
 
     document.addEventListener('DOMContentLoaded', function() {
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navMenu = document.querySelector('nav ul');
-        
-        mobileMenuBtn.addEventListener('click', function() {
-            navMenu.classList.toggle('show');
-        });
-        
-        // Close mobile menu when clicking on a link
-        const navLinks = document.querySelectorAll('nav ul li a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    navMenu.classList.remove('show');
-                }
-            });
-        });
+        // New mobile menu with icon toggling
+const mobileBtn = document.querySelector('.mobile-menu-btn');
+const navMenu = document.querySelector('nav ul');
+const menuIcon = mobileBtn.querySelector('i'); // Gets the icon element
+    
+mobileBtn.addEventListener('click', function() {
+    // Toggle menu visibility
+    navMenu.classList.toggle('show');
+    
+    // Toggle between bars and times icons
+    if(navMenu.classList.contains('show')) {
+        menuIcon.classList.replace('fa-bars', 'fa-times'); // Change to X icon
+    } else {
+        menuIcon.classList.replace('fa-times', 'fa-bars'); // Change back to ☰
+    }
+});
+    
+// Close menu when clicking links (mobile)
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function() {
+        if(window.innerWidth <= 768) {
+            navMenu.classList.remove('show');
+            mobileBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+        }
+    });
+});
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
