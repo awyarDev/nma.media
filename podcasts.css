@@ -1,0 +1,79 @@
+.podcasts-page {
+    padding: 50px 0;
+    background: #ffffff;
+}
+
+.podcast-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 0 20px;
+    
+}
+
+.podcast-item {
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.podcast-cover {
+    width: 100%;
+    aspect-ratio: 2/1.2;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.podcast-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.podcast-item h3 {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.podcast-item p {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Hover Effects */
+.podcast-item:hover .podcast-cover img {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .podcast-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .podcast-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .podcast-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Makes anchor cards work without breaking design */
+.podcast-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+

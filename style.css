@@ -355,6 +355,7 @@ nav ul.show li a {
                 flex-direction: column;
                 padding: 20px;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                
             }
 
             nav ul.show {
@@ -363,6 +364,7 @@ nav ul.show li a {
 
             nav ul li {
                 margin: 10px 0;
+                text-align: center;
             }
 
             .mobile-menu-btn {
@@ -511,3 +513,9 @@ nav ul.show li a {
 .series-item:hover {
   transform: scale(1.03); /* Your existing hover effect */
 }
+
+
+
+
+
+
