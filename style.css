@@ -147,10 +147,11 @@ nav ul.show li a {
 
         /* Hero Section */
         .hero {
-            padding: 120px 0 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            text-align: center;
+             padding: 120px 0 60px;
+    background: url('./background.jpg') no-repeat center center/cover; /* Replace with your image path */
+    color: white;
+    text-align: center;
+    position: relative;
         }
 
         .hero h2 {
