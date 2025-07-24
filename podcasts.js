@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         mobileMenuBtn.addEventListener('click', function() {
             navMenu.classList.toggle('show');
-        });
+     });
         
         // Close mobile menu when clicking on a link
         const navLinks = document.querySelectorAll('nav ul li a');
