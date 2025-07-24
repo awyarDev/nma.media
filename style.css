@@ -489,3 +489,25 @@ nav ul.show li a {
 }
 
    
+
+
+
+.series-item {
+  position: relative; /* Required for absolute positioning */
+}
+
+/* Invisible clickable overlay */
+.image-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Ensures it's above the image */
+  opacity: 0; /* Makes it invisible */
+}
+
+/* Preserve hover effects on the parent */
+.series-item:hover {
+  transform: scale(1.03); /* Your existing hover effect */
+}
