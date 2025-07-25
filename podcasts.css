@@ -97,15 +97,12 @@
 
 
 
-
-
-
 /* Recommendation Section */
 .recommendation-container {
     text-align: center;
-    margin: 40px 0;
-    
- 
+    margin: 40px auto;
+    max-width: 1600px; /* Maximum width for very large screens */
+    padding: 0 20px;
 }
 
 .recommend-btn {
@@ -114,10 +111,11 @@
     border: none;
     padding: 12px 24px;
     border-radius: 30px;
-    font-size: 18px;
+    font-size: clamp(16px, 1.5vw, 18px); /* Responsive font size */
     cursor: pointer;
     transition: all 0.3s ease;
     margin-bottom: 20px;
+    display: inline-block;
 }
 
 .recommend-btn:hover {
@@ -128,25 +126,22 @@
 
 .recommendations-grid {
     display: grid;
-    width: 80%;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-     margin: 20px auto;
+    width: 77%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 20px auto;
+    justify-content: center;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .recommendations-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
+/* Podcast item styling */
 #recommendations .podcast-item {
-    background: rgb(255, 255, 255);
+    background: #fff;
     border: 1px solid rgba(10, 126, 109, 0.1);
     border-radius: 12px;
     transition: all 0.3s ease;
     padding-bottom: 14px;
+    max-width: 400px; /* Maximum card width */
+    margin: 0 auto; /* Center cards on large screens */
 }
 
 #recommendations .podcast-item:hover {
@@ -154,6 +149,26 @@
     box-shadow: 0 8px 25px rgba(10, 126, 109, 0.15);
 }
 
-body{
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .recommendations-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (min-width: 1200px) {
+    .recommendations-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .recommendations-grid {
+        grid-template-columns: repeat(3, minmax(350px, 400px));
+    }
+}
+
+body {
     background-color: #0a7e6d28;
 }
