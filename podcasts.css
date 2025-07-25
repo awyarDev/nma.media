@@ -13,7 +13,9 @@
 
 .podcast-item {
     text-align: center;
-    background-color: #ffffff;
+    border: #3333331d solid 1px;
+    border-radius: 10px;
+    padding-bottom: 12px;
 }
 
 .podcast-cover {
@@ -42,6 +44,7 @@
     font-size: 14px;
     color: #666;
     font-weight: 500;
+    
 }
 
 /* Hover Effects */
@@ -141,7 +144,7 @@
 #recommendations .podcast-item {
     background: rgb(255, 255, 255);
     border: 1px solid rgba(10, 126, 109, 0.1);
-    border-radius: 13px;
+    border-radius: 12px;
     transition: all 0.3s ease;
     padding-bottom: 14px;
 }
