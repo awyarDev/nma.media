@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> زنجیرەکان</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="./nma.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="series.css">
+        <link rel="stylesheet" href="podcasts.css">
+</head>
+
+<style>
+
+     
+
+         /* Hide all by default */
+    .podcast-item { display: none; }
+    
+    /* Show based on filter */
+    #all:checked ~ .podcast-grid .podcast-item { display: block; }
+    #religion:checked ~ .podcast-grid .podcast-item[data-category="religion"] { display: block; }
+    /* Add other filters */
+</style>
+
+
+<body>
+    <!-- Your Existing Header -->
+ <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./nma.png" alt="NMA Media">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">سەرەتا</a></li>
+                    <li><a href="podcasts.html" class="active">پۆدکاستەکان</a></li>
+                    <li><a href="series.html">زنجیرەکان</a></li>
+                    <li><a href="index.html">دەربارەی ئێمە</a></li>
+                    <li><a href="index.html">پەیوەندی</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+        </div>
+    </header>
+
+
+
+
+
+<body>
+      <section class="hero" id="sarata">
+        <div class="container">
+            <div class="hero-content">
+                <br>
+                <h2>زنـجـیرەکان</h2>
+                <!-- <p>نما میدیا میدیایەکی سەربەخۆیە کاردەکات بۆ بڵاوکردنەوەی ڕۆشنبیری و هۆشیاری لە بوارەکانی (ئاینی، سیاسی، هونەری، زانستی و پیشەیی) تایبەت بە لاوان کە پێکهێنەری گرنگ و سەرەکی کۆمەڵگەن بۆ بەهێزکردنیان بە لێهاتوویی و مەعریفەی پێویست بۆ ئەوەی بەشێکی چالاک بن لە کۆمەڵ و دەستیان هەبێت لە ئاوەدان کردنەوە و بەرەوپێشبردنی وڵات لە هەرشوێنێک کە هەن بە هەر شێواز و ئاستێک کە لە توانایاندایە.وە کاردەکات بۆ هۆشیاکردنەوەی لاوان لە مەترسییەکانی ئێستا و ڕوبەڕووبوونەوەیان و پلاندانان بۆ داهاتوویەکی باشتر.«بیری باڵا، کاری باڵا، تاکی باڵا»</p>
+            -->
+                <!-- <p>ئەتەوێت ئاشنای نما میدیا ببیت؟</p> -->
+            </div>
+        </div>
+    </section>
+
+
+    <section class="filters">
+    <div class="container">
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterPodcasts('all')">هەمــوو</button>
+            <button class="filter-btn" onclick="filterPodcasts('religion')">ئـیـسلام بە سادەیی</button>
+            <button class="filter-btn" onclick="filterPodcasts('family')">لەگەڵ دەروونـمدا</button>
+            <button class="filter-btn" disabled onclick="filterPodcasts('education')">هـاوسەنگیەکان</button>
+           
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<main class="podcasts-page">
+    <div class="container">
+      <div class="podcast-grid">
+    <!-- Religion Category -->
+    <a href="https://youtu.be/QmvuLn2d0vo?si=Y4MPKOfAFT1uj8rx" target="_blank" class="podcast-item" data-category="religion">
+        <div class="podcast-cover">
+            <img src="./e1.jpg" alt="پۆدکاست">
+        </div>
+        <h3> چۆن ئیسلام پێناسە دەکرێت؟</h3>
+        <p> پڕۆمۆ    </p>
+    </a>
+
+    <a href="https://youtu.be/hPrIvy6__Ew?si=KcEFEz-0ZNv_n5gK" target="_blank" class="podcast-item" data-category="religion">
+        <div class="podcast-cover">
+            <img src="./e2.jpg" alt="پۆدکاست">
+        </div>
+        <h3>ئیسلام بەسادەیی چییە؟</h3>
+        <p>ئەڵقەی یەکەم  </p>
+    </a>
+
+    <a href="https://youtu.be/ipPKiAOl4jI?si=ygYH8b9r9Bi8vDSo" target="_blank" class="podcast-item" data-category="religion">
+        <div class="podcast-cover">
+            <img src="./e3.jpg" alt="پۆدکاست">
+        </div>
+        <h3> ئیسلام چییە؟</h3>
+        <p>ئەڵقەی دووەم  </p>
+    </a>
+
+
+    <a href="https://youtu.be/fFz6HXmnUfc?si=o9tsQdHYE4Ferd0Z" target="_blank" class="podcast-item" data-category="religion">
+        <div class="podcast-cover">
+            <img src="./e4.jpg" alt="پۆدکاست">
+        </div>
+        <h3>  پاراستنی دین </h3>
+        <p>ئەڵقەی سێیەم  </p>
+    </a>
+
+    <!-- Family Category -->
+    <a href="https://youtu.be/wgI1R5y4aYM?si=4v4Ifh0zRkX0kprC" target="_blank" class="podcast-item" data-category="family">
+        <div class="podcast-cover">
+            <img src="./d1.jpg" alt="پۆدکاست">
+        </div>
+        <h3> چیرۆکی ئەم دانیشتنانە چین؟ من کێم؟ پزیشکی دەروونی یان ڕاوێژکاری دەروونی؟   </h3>
+        <p>ئەڵقەی یەکەم  </p>
+    </a>
+
+    <a href="https://youtu.be/VmX9JnnzVlk?si=QBexz7ZibtMmWV_2" target="_blank" class="podcast-item" data-category="family">
+        <div class="podcast-cover">
+            <img src="./d2.jpg" alt="پۆدکاست">
+        </div>
+        <h3>  ئەم دانیشتنانە ڕوویان لە کێیە؟ ئەی چۆن سوودیان لێ ببینین؟</h3>
+         <p>ئەڵقەی دووەم  </p>
+    </a>
+
+</div>
+    </div>
+</main>
+
+
+
+
+<!-- <div class="recommendation-container">
+    <button id="recommendBtn" class="recommend-btn">
+         پێشنیاری پۆدکاستم بۆ بکە  
+     <i class="fas fa-random"></i> 
+    </button>
+    <div id="recommendations" class="recommendations-grid"></div>
+</div> -->
+
+
+
+  
+    <footer>
+        <div class="container">
+            <p>&copy; سەرجەم مافەکانی پارێزراوە بۆ نما میدیا ٢٠٢٥.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="podcasts.js"></script>
+    <script src="series.js"></script>
+</body>
+</html>
