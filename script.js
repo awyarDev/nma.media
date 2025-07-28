@@ -152,6 +152,35 @@ window.addEventListener('scroll', function() {
 
 
 
-
-
-
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('commentForm');
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const note = document.getElementById('userNote').value;
+        const speaker = document.getElementById('speakerSuggestion').value;
+        
+        if (!note.trim()) {
+            showNotification('تکایە تێبینیەکانت بنووسە', 'error');
+            return;
+        }
+        
+        const comment = {
+            id: Date.now(),
+            note: note,
+            speaker: speaker,
+            date: new Date().toISOString()
+        };
+        
+        saveComment(comment);
+        form.reset();
+        showNotification('ســوپاس! تێبینیەکەت بە سەرکەوتووی تۆمارکرا');
+    });
+    
+    function saveComment(comment) {
+        let comments = JSON.parse(localStorage.getItem('podcastComments')) || [];
+        comments.unshift(comment);
+        localStorage.setItem('podcastComments', JSON.stringify(comments));
+    }
+});

@@ -518,4 +518,251 @@ nav ul.show li a {
 
 
 
+.comment-section {
+    background-color: #fff;
+    padding: 80px 0;
+    padding: 50px 0;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.comment-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    /* background: linear-gradient(90deg, #0a7e6d, #0ac2a5); */
+}
+
+.comment-header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.comment-header h2 {
+    color: #0a7e6d;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.comment-header h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #0a7e6d;
+    border-radius: 3px;
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.comment-form {
+    max-width: 700px;
+    margin: 0 auto;
+    direction: rtl;
+    padding: 0 25px;
+}
+
+.form-group {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #444;
+    font-size: 1.15rem;
+    position: relative;
+    padding-right: 10px;
+}
+
+.form-group label::before {
+    content: "*";
+    color: #0a7e6d;
+    position: absolute;
+    right: -5px;
+    top: 2px;
+    font-size: 1.2rem;
+}
+
+.form-group label i {
+    margin-left: 10px;
+    color: #0a7e6d;
+}
+
+.form-group textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    resize: vertical;
+    transition: all 0.3s ease;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    background-color: #f9f9f9;
+}
+
+.form-group textarea:focus {
+    border-color: #0a7e6d;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(10, 126, 109, 0.15);
+    background-color: #fff;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.form-group input[type="text"]:focus {
+    border-color: #0a7e6d;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(10, 126, 109, 0.15);
+    background-color: #fff;
+}
+
+.submit-btn {
+    background-color: #0a7e6d;
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 50px auto 0;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(10, 126, 109, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.submit-btn:hover {
+    background-color: #088374;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(10, 126, 109, 0.4);
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 15px rgba(10, 126, 109, 0.4);
+}
+
+.submit-btn i {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Floating animation for the section */
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.comment-section {
+    animation: floatIn 0.6s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .comment-section {
+        padding: 60px 0;
+        padding: 100px 0;
+    }
+    
+    .comment-header {
+        margin-bottom: 40px;
+    }
+    
+    .comment-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .comment-form {
+        padding: 0 20px;
+    }
+    
+    .form-group textarea {
+        min-height: 160px;
+        padding: 15px;
+    }
+    
+    .form-group input[type="text"] {
+        padding: 15px;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .comment-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .form-group label {
+        font-size: 1.05rem;
+    }
+}
+
 
