@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="./nma.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="comment.css">
+</head>
+
+
+
+<body>
+
+
+<div id="loginModal" class="modal" style="display: flex;">
+    <div class="modal-content">
+        <h3><i class="fas fa-user-shield"></i> چوونەژوورەوەی ئەدمین</h3>
+        
+        <div class="form-group">
+            <label for="loginUsername">ناوی بەکارهێنەر</label>
+            <div class="input-container">
+                <input type="text" id="loginUsername" class="modal-input" placeholder="بەکارهێنەر">
+                
+            </div>
+            <div class="error-message" id="usernameError">تکایە ناوی بەکارهێنەر بنووسە</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="loginPassword">وشەی نهێنی</label>
+            <div class="input-container">
+                <input type="password" id="loginPassword" class="modal-input" placeholder="وشەی نهێنی">
+                
+            </div>
+            <div class="error-message" id="passwordError">تکایە وشەی نهێنی بنووسە</div>
+        </div>
+        
+        <button id="loginBtn">
+            <i class="fas fa-sign-in-alt"></i>
+            چوونەژوورەوە
+        </button>
+    </div>
+</div>
+
+
+
+    <div class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-comments"></i> بەڕێوەبردنی تێبینیەکان</h1>
+            <p>تێبینیەکانی بەکارهێنەران</p>
+        </div>
+        
+        <button id="exportAllBtn" class="action-btn export-btn">
+            <i class="fas fa-file-export"></i> هەڵگرتنی هەموو تێبینیەکان
+        </button>
+         <button id="logoutBtn" class="action-btn" style="background: #c62828; color: white;">
+            <i class="fas fa-sign-out-alt"></i> چوونەدەرەوە
+        </button>
+        
+        <table class="comments-table">
+            <thead>
+                <tr>
+                    <th>بەروار</th>
+                    <th>تێبینی</th>
+                    <th>پێشنیاری میوان</th>
+                    <th>کردارەکان</th>
+                </tr>
+            </thead>
+            <tbody id="commentsList">
+                <!-- Comments will be loaded here -->
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Password Modal -->
+    <div class="modal" id="passwordModal">
+        <div class="modal-content">
+            <h3>تکایە وشەی نهێنی بنووسە</h3>
+            <input type="password" id="adminPassword" class="modal-input" placeholder="وشەی نهێنی">
+            <div class="modal-actions">
+                <button id="confirmDeleteBtn" class="action-btn" style="background: var(--primary-color); color: white;">دڵنیاکردنەوە</button>
+                <button id="cancelDeleteBtn" class="action-btn" style="background: #666; color: white;">پاشگەزبوونەوە</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="comment.js"></script>
+</body>
+</html>
