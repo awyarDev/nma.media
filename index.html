@@ -405,35 +405,31 @@
 
 <section class="comment-section">
     <div class="container">
-        <div class="comment-header">
-            <h2>چەند تێبینیەکمان پێ ببەخشە</h2>
-            <p class="section-subtitle">پێشنیار و ڕەخنەکانت بۆمان بنێرە</p>
-        </div>
-
-        <!-- <div class="form-group">
-                <label for="userNote">
-                     تێبینیەکانت:
-                </label>
-                <textarea id="userNote" name="userNote" required 
-                          placeholder="تێبینیەکانت لێرە بنووسە..."></textarea>
-            </div>
+        <div class="comment-flex-container">
+            <!-- QR Code Image -->
             
-            <div class="form-group">
-                <label for="speakerSuggestion">
-                 پێشنیاری کەسێک بکە بۆمان بۆ پۆدکاست :
-                </label>
-                <input type="text" id="speakerSuggestion" name="speakerSuggestion" 
-                       placeholder="ناوی کەسێک کە پێشنیاری دەکەیت">
+            
+            <!-- Text Content -->
+            <div class="comment-content">
+                <div class="comment-header">
+                    <h2>چەند تێبینیەکمان پێ ببەخشە</h2>
+                    <p class="section-subtitle">پێشنیار و ڕەخنەکانت بۆمان بنێرە</p>
+                </div>
+                
+                <button type="submit" class="submit-btn mobile-only-btn">
+                    <i class="fas fa-paper-plane"></i> ناردن
+                </button>
             </div>
-         -->
-            <button type="submit" class="submit-btn">
-                <i class="fas fa-paper-plane"></i> ناردن
-            </button>
-        </form>
+
+            <div class="qr-code-container">
+                <a href="YOUR_LINK_HERE" target="_blank" class="qr-code-link">
+                    <img src="./qr-code.png" alt="QR Code" class="qr-code-image">
+                    <span class="qr-code-hint">کلیک بکە بۆ کردنەوەی لینک</span>
+                </a>
+            </div>
+        </div>
     </div>
 </section>
-
-
 
 
     <section class="cta" id="llastt">
