@@ -215,3 +215,17 @@ function showNotification(message, type = 'success') {
 }
 
 
+// Simple loader dismissal
+window.addEventListener('load', function() {
+  const loader = document.querySelector('.nma-sleek-loader');
+  
+  // Add a slight delay before starting fade out
+  setTimeout(() => {
+    loader.classList.add('hidden');
+    
+    // Remove loader after animation completes
+    setTimeout(() => {
+      loader.remove();
+    }, 800);
+  }, 500); // Adjust this delay based on your needs
+});
