@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NMA Media</title>
+    <title>Nma Media</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
       <link rel="icon" href="./nma.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -151,7 +151,36 @@
         }
     }
 
-    
+    .typing-text-container {
+    height: 4.5rem;
+    display: flex;
+    justify-content: center;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    font-size: 4.5rem;
+    font-weight: 600;
+    margin-bottom: 3.5rem;
+}
+
+#typing-text {
+    text-align: center;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1 }
+    50% { opacity: 0 }
+}
+
+@media (max-width: 768px) {
+    .typing-text-container {
+        font-size: 2.2rem;
+        height: 3rem;
+    }
+}
 </style>
 
 <script>
@@ -244,15 +273,19 @@
             </div>
         </div>
     </header>
+
+        
 <section class="hero" id="sarata">
     <div class="light-particles"></div>
     <div class="text-container">
-        <h1 class="typing-text"></h1>
+        <div class="typing-text-container">
+            <span id="typing-text"></span>
+            <span class="cursor">|</span>
+        </div>
         <p class="animated-subtitle">ئەتەوێت ئاشنای نما میدیا ببیت؟</p>
     </div>
     <div class="scrolling-shadow"></div>
 </section>
-
 
 
     <!-- Add this section where you want it to appear -->
@@ -394,10 +427,8 @@
         <div class="persian-container">
             <h2 class="persian-title">بۆچی پێویستە پشتگیری نما میدیا بکەیت ؟</h2>
             <div class="persian-content">
-                <p>نما میدیا میدیایەکی سەربەخۆیە کاردەکات بۆ بڵاوکردنەوەی ڕۆشنبیری و هۆشیاری لە بوارەکانی (ئاینی، سیاسی، هونەری، زانستی و پیشەیی) تایبەت بە لاوان کە پێکهێنەری گرنگ و سەرەکی کۆمەڵگەن بۆ بەهێزکردنیان بە لێهاتوویی و مەعریفەی پێویست بۆ ئەوەی بەشێکی چالاک بن لە کۆمەڵ و دەستیان هەبێت لە ئاوەدان کردنەوە و بەرەوپێشبردنی وڵات لە هەرشوێنێک کە هەن بە هەر شێواز و ئاستێک کە لە توانایاندایە.</p>
-                
-                <p>وە کاردەکات بۆ هۆشیاکردنەوەی لاوان لە مەترسییەکانی ئێستا و ڕوبەڕووبوونەوەیان و پلاندانان بۆ داهاتوویەکی باشتر.</p>
-               
+
+                <p>تۆ بە ڕێکەوت لێرە نیت ، تۆ بەشێکیت لە نەوەیەک کە بەدوای مانا دەگەڕێت و بە ئاگا هاتووە.. ، پەیامەکانی نما میدیا دەنگی ئێوەن، لەگەڵی بوەستن تا گۆڕانکاری دروستبکەین.. ، پشتگیری پەیامەکەمان بکە، بە هەر هەنگاوێک تۆ دەبیتە بەشێک لە نما میدیا…</p>
                 
             </div>
         </div>

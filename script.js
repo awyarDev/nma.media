@@ -229,3 +229,65 @@ window.addEventListener('load', function() {
     }, 800);
   }, 500); // Adjust this delay based on your needs
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const texts = [
+        "بەخێربێن بۆ نما میدیا",
+        "بیری باڵا، تاکی باڵا، کاری باڵا",
+        "بەخێربێن بۆ نما میدیا", 
+        "بیری باڵا، تاکی باڵا، کاری باڵا"
+    ];
+    
+    const typingElement = document.getElementById('typing-text');
+    const cursorElement = document.querySelector('.cursor');
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    // Timing configuration (in milliseconds)
+    const typingSpeed = 100 + Math.random() * 50; // Speed while typing (100-150ms per letter)
+    const deletingSpeed = 30; // Speed while deleting (30ms per letter)
+    const displayDuration = 15000; // 30 SECONDS display time after typing
+    const initialDelay = 1000; // 1 second delay before starting
+
+    function type() {
+        const currentText = texts[textIndex];
+        
+        if (isDeleting) {
+            // Deleting text
+            typingElement.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+            
+            if (charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(type, 100); // Short pause before typing next text
+                return;
+            }
+        } else {
+            // Typing text
+            typingElement.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+            
+            if (charIndex === currentText.length) {
+                setTimeout(() => {
+                    isDeleting = true;
+                    type(); // Start deleting after long display
+                }, displayDuration); // Wait 30 seconds before deleting
+                return;
+            }
+        }
+
+        // Continue typing/deleting
+        const speed = isDeleting ? deletingSpeed : typingSpeed;
+        setTimeout(type, speed);
+    }
+
+    // Start the typing effect
+    setTimeout(type, initialDelay);
+    
+    // Create floating light spots
+    for (let i = 0; i < 15; i++) {
+        createFloatingLight();
+    }
+});
