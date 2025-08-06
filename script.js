@@ -175,9 +175,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function initTypingAnimation() {
         const texts = [
             "بەخێربێن بۆ نما میدیا",
-            "بیری باڵا، کاری باڵا، تاکی باڵا",
-            "کاری باڵا", 
-            "بیری باڵا، کاری باڵا، تاکی باڵا"
+            "بیری بـــــــاڵا",
+            "کاری بـــــــاڵا", 
+            "تاکی بـــــــاڵا"
         ];
         const typingElement = document.getElementById('typing-text');
         const cursorElement = document.querySelector('.cursor');
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let charIndex = 0;
         let isDeleting = false;
         let typingSpeed = 100 + Math.random() * 50;
-        const displayDuration = 15000; // 30 seconds display time
+        const displayDuration = 3000; // 30 seconds display time
 
         function type() {
             const currentText = texts[textIndex];
