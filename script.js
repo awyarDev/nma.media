@@ -233,9 +233,9 @@ window.addEventListener('load', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const texts = [
         "بەخێربێن بۆ نما میدیا",
-        "بیری باڵا، تاکی باڵا، کاری باڵا",
+        "بەخێربێن بۆ نما میدیا",
         "بەخێربێن بۆ نما میدیا", 
-        "بیری باڵا، تاکی باڵا، کاری باڵا"
+        "بەخێربێن بۆ نما میدیا"
     ];
     
     const typingElement = document.getElementById('typing-text');
